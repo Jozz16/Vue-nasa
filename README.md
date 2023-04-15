@@ -1,8 +1,13 @@
 # vue-nasa
+Proyecto destinado al consumo de la nasa-api (Imagen del día) Docs: https://api.nasa.gov/
 
 ## Project setup
 ```
 npm install
+```
+## Node version 
+```
+v18.14.1
 ```
 
 ### Compiles and hot-reloads for development
