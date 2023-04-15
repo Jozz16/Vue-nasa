@@ -31,6 +31,7 @@
      <button type="button" class="btn btn-primary">Success</button>
      <button type="button" class="btn btn-info">Info</button>
      <button type="button" class="btn btn-warning">Warning</button>
+     <img :src="nasaImg">
   </div>
   </div>
 
@@ -39,10 +40,27 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      nasaImg: null
+    }
+  },
+  mounted () {
+
+    const x_api_key = 'DLLiELxaRGmu2QNUiD26kzW9clIivHoFXGgQLuRX'
+    axios({
+      method: 'get',
+      url: `https://api.nasa.gov/planetary/apod?api_key=${x_api_key}`
+    }).then(resp => {
+      console.log(resp)
+      this.nasaImg = resp.data.url
+    })
   }
 }
 </script>
