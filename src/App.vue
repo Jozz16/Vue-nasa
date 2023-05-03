@@ -1,20 +1,24 @@
 
 <template>
+
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TitleNasa />
+    <ImgNasa />
   </div>
 </template>
 
 <script>
 // instalar bootstrap 
 // y hechar un ojo a axios
-import HelloWorld from './components/HelloWorld.vue'
+import ImgNasa from './components/img.vue'
+import TitleNasa from './components/title.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ImgNasa,
+    TitleNasa
   }
 }
 </script>
@@ -26,6 +30,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
 }
+
 </style>
